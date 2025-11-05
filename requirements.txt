@@ -1,0 +1,6 @@
+python 3.13.5
+streamlit 1.50.0
+requests 2.34.4
+psycopg 3.2.12
+JSON
+pandas 2.3.3

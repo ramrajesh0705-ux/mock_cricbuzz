@@ -1,0 +1,29 @@
+import psycopg2
+import streamlit as st
+
+def create_connection():
+    try:
+        conn = psycopg2.connect(
+            host="localhost",        
+            port="5432",             
+            database="cricbuzz",  
+            user="postgres",       
+            password="postgres" 
+        )
+        return conn
+    except Exception as e:
+        return None
+
+def execute(query, params=None):
+        try:
+            conn = create_connection()
+            with conn.cursor() as cur:
+                cur.execute(query, params or ())
+                conn.commit()
+                return True
+        except Exception as e:
+            st.error(f"Error executing query: {e}")
+            return False
+        finally:
+            if conn:
+                conn.close()
