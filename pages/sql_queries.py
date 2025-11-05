@@ -63,7 +63,7 @@ if selected_qid is not None:
                 player_name = most_runs['values'][1]
                 runs        = most_runs['values'][4]
                 average     = most_runs['values'][5]
-                most_runs_list = {"player_id":player_id,"player_name":player_name,"total_runs_scored":runs,"average":average}
+                most_runs_list = (player_id,player_name,runs,average)
                 query = "insert into most_runs (player_id,player_name,total_runs_scored,batting_average) values (%s,%s,%s,%s)"
                 db.execute(query=query,params=most_runs_list)
 
