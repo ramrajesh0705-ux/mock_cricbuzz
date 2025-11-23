@@ -7,7 +7,7 @@ import pandas as pd
 
 player_search_url = "https://cricbuzz-cricket.p.rapidapi.com/stats/v1/player/search"
 headers = {
-	"x-rapidapi-key": "2ff514151fmsh912ff982e96dabbp19c56cjsnea7d12a552fa",
+	"x-rapidapi-key": "096090eac4mshd73dfcde8a35834p1911efjsn4dcdb491bdcc",
 	"x-rapidapi-host": "cricbuzz-cricket.p.rapidapi.com"
 }
 
@@ -163,7 +163,7 @@ if 'player_id' in st.session_state:
                     'CURRENT RANK' : [bat.get('testRank','-'),bat.get('odiRank','-'),bat.get('t20iRank','-')],
                     'BEST RANK'    : [bat.get('testBestRank','-'),bat.get('odiBestRank','-'),bat.get('testBestRank','-')]
                 }
-                bat_df = pd.DataFrame(bat_ranks);
+                bat_df = pd.DataFrame(bat_ranks)
                 st.table(bat_df)
             with rank_tabs[1]:
                 bowl = rankings_info.get('bowl',{})

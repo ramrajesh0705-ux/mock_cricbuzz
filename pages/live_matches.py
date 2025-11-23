@@ -6,7 +6,7 @@ live_matches_list_url   = "https://cricbuzz-cricket.p.rapidapi.com/matches/v1/li
 recent_matches_list_url = "https://cricbuzz-cricket.p.rapidapi.com/matches/v1/recent"
 
 headers = {
-	"x-rapidapi-key": "2ff514151fmsh912ff982e96dabbp19c56cjsnea7d12a552fa",
+	"x-rapidapi-key": "096090eac4mshd73dfcde8a35834p1911efjsn4dcdb491bdcc",
 	"x-rapidapi-host": "cricbuzz-cricket.p.rapidapi.com"
 }
 
@@ -194,9 +194,13 @@ if selected_match_detail is not None:
             
             batsman_data_row = f"""
                             <tr style='background-color:#0066cc;color:white;font-weight:bold;'>
-                            <td style='width:20%;'>Batsman</td>
-                            <td style='width:40%;'>Out Desc</td>
-                            <td>Runs</td><td>Balls</td><td>Fours</td><td>Sixes</td><td>Strike Rate</td>
+                            <td>Batsman</td>
+                            <td>Out Desc</td>
+                            <td>Runs</td>
+                            <td>Balls</td>
+                            <td>Fours</td>
+                            <td>Sixes</td>
+                            <td>Strike Rate</td>
                             </tr>
                             """
             
